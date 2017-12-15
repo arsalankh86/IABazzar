@@ -1,0 +1,48 @@
+D:\IabazaarCodeSmith\IABazaar.Repository\obj\Debug\ResolveAssemblyReference.cache
+D:\IabazaarCodeSmith\IABazaar.Repository\bin\Debug\IABazaar.Core.dll
+D:\IabazaarCodeSmith\IABazaar.Repository\bin\Debug\IABazaar.Core.pdb
+D:\IabazaarCodeSmith\IABazaar.Repository\bin\Debug\Spring.Core.dll
+D:\IabazaarCodeSmith\IABazaar.Repository\bin\Debug\IABazaar.Repository.dll
+D:\IabazaarCodeSmith\IABazaar.Repository\bin\Debug\IABazaar.Repository.pdb
+D:\IabazaarCodeSmith\IABazaar.Repository\obj\Debug\IABazaar.Repository.dll
+D:\IabazaarCodeSmith\IABazaar.Repository\obj\Debug\IABazaar.Repository.pdb
+D:\work\IABazaar\IABazaar\IABazaar.Repository\obj\Debug\ResolveAssemblyReference.cache
+D:\work\IABazaar\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.dll
+D:\work\IABazaar\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.pdb
+D:\work\IABazaar\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.dll
+D:\work\IABazaar\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.pdb
+D:\work\IABazaar\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.dll
+D:\work\IABazaar\IABazaar\IABazaar.Repository\bin\Debug\Spring.Core.dll
+D:\work\IABazaar\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.pdb
+D:\work\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.dll
+D:\work\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.pdb
+D:\work\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.dll
+D:\work\IABazaar\IABazaar.Repository\bin\Debug\Spring.Core.dll
+D:\work\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.pdb
+D:\work\IABazaar\IABazaar.Repository\obj\Debug\ResolveAssemblyReference.cache
+D:\work\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.dll
+D:\work\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.pdb
+F:\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.dll
+F:\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.pdb
+F:\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.dll
+F:\IABazaar\IABazaar.Repository\bin\Debug\Spring.Core.dll
+F:\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.pdb
+F:\IABazaar\IABazaar.Repository\obj\Debug\ResolveAssemblyReference.cache
+F:\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.dll
+F:\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.pdb
+E:\D Drive Data\work\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.dll
+E:\D Drive Data\work\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.pdb
+E:\D Drive Data\work\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.dll
+E:\D Drive Data\work\IABazaar\IABazaar.Repository\bin\Debug\Spring.Core.dll
+E:\D Drive Data\work\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.pdb
+E:\D Drive Data\work\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.csprojResolveAssemblyReference.cache
+E:\D Drive Data\work\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.dll
+E:\D Drive Data\work\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.pdb
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.dll
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Repository.pdb
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.dll
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Repository\bin\Debug\Spring.Core.dll
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Repository\bin\Debug\IABazaar.Core.pdb
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.dll
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Repository\obj\Debug\IABazaar.Repository.pdb

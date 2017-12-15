@@ -1,0 +1,326 @@
+﻿using System;
+using System.ComponentModel;
+using System.Collections;
+using System.Data;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+using IABazaar.Core;
+using IABazaar.Core.Entities;
+
+
+namespace IABazaar.Repository
+{
+		
+	public abstract partial class KitGroupRepositoryBase : Repository 
+	{
+        
+        public KitGroupRepositoryBase()
+        {   
+            this.SearchColumns=new Dictionary<string, SearchColumn>();
+
+			this.SearchColumns.Add("KitGroupID",new SearchColumn(){Name="KitGroupID",Title="KitGroupID",SelectClause="KitGroupID",WhereClause="AllRecords.KitGroupID",DataType="System.Int32",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("KitGroupGUID",new SearchColumn(){Name="KitGroupGUID",Title="KitGroupGUID",SelectClause="KitGroupGUID",WhereClause="AllRecords.KitGroupGUID",DataType="System.Guid",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("Name",new SearchColumn(){Name="Name",Title="Name",SelectClause="Name",WhereClause="AllRecords.Name",DataType="System.String",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("Description",new SearchColumn(){Name="Description",Title="Description",SelectClause="Description",WhereClause="AllRecords.Description",DataType="System.String",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("Summary",new SearchColumn(){Name="Summary",Title="Summary",SelectClause="Summary",WhereClause="AllRecords.Summary",DataType="System.String",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("ProductID",new SearchColumn(){Name="ProductID",Title="ProductID",SelectClause="ProductID",WhereClause="AllRecords.ProductID",DataType="System.Int32",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("DisplayOrder",new SearchColumn(){Name="DisplayOrder",Title="DisplayOrder",SelectClause="DisplayOrder",WhereClause="AllRecords.DisplayOrder",DataType="System.Int32",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("KitGroupTypeID",new SearchColumn(){Name="KitGroupTypeID",Title="KitGroupTypeID",SelectClause="KitGroupTypeID",WhereClause="AllRecords.KitGroupTypeID",DataType="System.Int32",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("IsRequired",new SearchColumn(){Name="IsRequired",Title="IsRequired",SelectClause="IsRequired",WhereClause="AllRecords.IsRequired",DataType="System.Byte",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("ExtensionData",new SearchColumn(){Name="ExtensionData",Title="ExtensionData",SelectClause="ExtensionData",WhereClause="AllRecords.ExtensionData",DataType="System.String",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("CreatedOn",new SearchColumn(){Name="CreatedOn",Title="CreatedOn",SelectClause="CreatedOn",WhereClause="AllRecords.CreatedOn",DataType="System.DateTime",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});
+			this.SearchColumns.Add("IsReadOnly",new SearchColumn(){Name="IsReadOnly",Title="IsReadOnly",SelectClause="IsReadOnly",WhereClause="AllRecords.IsReadOnly",DataType="System.Byte",IsForeignColumn=false,IsAdvanceSearchColumn = false,IsBasicSearchColumm = false});        
+        }
+        
+		public virtual List<SearchColumn> GetKitGroupSearchColumns()
+        {
+            List<SearchColumn> searchColumns = new List<SearchColumn>();
+            foreach (KeyValuePair<string, SearchColumn> keyValuePair in this.SearchColumns)
+            {
+                searchColumns.Add(keyValuePair.Value);
+            }
+            return searchColumns;
+        }
+		
+		
+		
+        public virtual Dictionary<string, string> GetKitGroupBasicSearchColumns()
+        {
+			Dictionary<string, string> columnList = new Dictionary<string, string>();
+            foreach (KeyValuePair<string, SearchColumn> keyValuePair in this.SearchColumns)
+            {
+                if (keyValuePair.Value.IsBasicSearchColumm)
+                {
+                    columnList.Add(keyValuePair.Key, keyValuePair.Value.Title);
+                }
+            }
+            return columnList;
+        }
+
+        public virtual List<SearchColumn> GetKitGroupAdvanceSearchColumns()
+        {
+            List<SearchColumn> searchColumns = new List<SearchColumn>();
+            foreach (KeyValuePair<string, SearchColumn> keyValuePair in this.SearchColumns)
+            {
+                if (keyValuePair.Value.IsAdvanceSearchColumn)
+                {
+                    searchColumns.Add(keyValuePair.Value);
+                }
+            }
+            return searchColumns;
+        }
+        
+        
+        public virtual string GetKitGroupSelectClause()
+        {
+            List<SearchColumn> searchColumns = new List<SearchColumn>();
+            string selectQuery=string.Empty;
+            foreach (KeyValuePair<string, SearchColumn> keyValuePair in this.SearchColumns)
+            {
+                if (!keyValuePair.Value.IgnoreForDefaultSelect)
+                {
+					if (keyValuePair.Value.IsForeignColumn)
+                	{
+						if(string.IsNullOrEmpty(selectQuery))
+						{
+							selectQuery = "("+keyValuePair.Value.SelectClause+") as \""+keyValuePair.Key+"\"";
+						}
+						else
+						{
+							selectQuery += ",(" + keyValuePair.Value.SelectClause + ") as \"" + keyValuePair.Key + "\"";
+						}
+                	}
+                	else
+                	{
+                    	if (string.IsNullOrEmpty(selectQuery))
+                    	{
+                        	selectQuery =  "KitGroup."+keyValuePair.Key;
+                    	}
+                    	else
+                    	{
+                        	selectQuery += ",KitGroup."+keyValuePair.Key;
+                    	}
+                	}
+            	}
+            }
+            return "Select "+selectQuery+" ";
+        }
+        
+
+		public virtual KitGroup GetKitGroup(System.Int32 KitGroupId)
+		{
+
+			string sql=GetKitGroupSelectClause();
+			sql+="from KitGroup where KitGroupID=@KitGroupID ";
+			SqlParameter parameter=new SqlParameter("@KitGroupID",KitGroupId);
+			DataSet ds=SqlHelper.ExecuteDataset(this.ConnectionString,CommandType.Text,sql,new SqlParameter[] { parameter });
+			if (ds == null || ds.Tables.Count != 1 || ds.Tables[0].Rows.Count != 1) return null;
+			return KitGroupFromDataRow(ds.Tables[0].Rows[0]);
+		}
+
+		public virtual List<KitGroup> GetAllKitGroup()
+		{
+
+			string sql=GetKitGroupSelectClause();
+			sql+="from KitGroup";
+			DataSet ds=SqlHelper.ExecuteDataset(this.ConnectionString,CommandType.Text,sql,null);
+			if (ds == null || ds.Tables.Count != 1 || ds.Tables[0].Rows.Count == 0) return null;
+			return CollectionFromDataSet<KitGroup>(ds, KitGroupFromDataRow);
+		}
+
+		public virtual List<KitGroup> GetPagedKitGroup(string orderByClause, int pageSize, int startIndex,out int count, List<SearchColumn> searchColumns)
+		{
+
+			string whereClause = base.GetAdvancedWhereClauseByColumn(searchColumns, GetSearchColumns());
+               if (!String.IsNullOrEmpty(orderByClause))
+               {
+                   KeyValuePair<string, string> parsedOrderByClause = base.ParseOrderByClause(orderByClause);
+                   orderByClause = base.GetBasicSearchOrderByClauseByColumn(parsedOrderByClause.Key, parsedOrderByClause.Value, this.SearchColumns);
+               }
+
+            count=GetKitGroupCount(whereClause, searchColumns);
+			if(count>0)
+			{
+			if (count < startIndex) startIndex = (count / pageSize) * pageSize;			
+			
+           	int PageLowerBound = startIndex;
+            int PageUpperBound = PageLowerBound + pageSize;
+            string sql = @"CREATE TABLE #PageIndex
+				            (
+				                [IndexId] int IDENTITY (1, 1) NOT NULL,
+				                [KitGroupID] int				   
+				            );";
+
+            //Insert into the temp table
+            string tempsql = "INSERT INTO #PageIndex ([KitGroupID])";
+            tempsql += " SELECT ";
+            if (pageSize > 0) tempsql += "TOP " + PageUpperBound.ToString();
+            tempsql += " [KitGroupID] ";
+            tempsql += " FROM [KitGroup] AllRecords";
+            if (!string.IsNullOrEmpty(whereClause) && whereClause.Length > 0) tempsql += " WHERE " + whereClause;
+            if (orderByClause.Length > 0) 
+			{
+				tempsql += " ORDER BY " + orderByClause;
+				if( !orderByClause.Contains("KitGroupID"))
+					tempsql += " , (AllRecords.[KitGroupID])"; 
+			}
+			else 
+			{
+				tempsql  += " ORDER BY (AllRecords.[KitGroupID])"; 
+			}           
+            
+            // Return paged results
+            string pagedResultsSql =
+                GetKitGroupSelectClause()+@" FROM [KitGroup], #PageIndex PageIndex WHERE ";
+            pagedResultsSql += " PageIndex.IndexId > " + PageLowerBound.ToString(); 
+            pagedResultsSql += @" AND [KitGroup].[KitGroupID] = PageIndex.[KitGroupID] 
+				                  ORDER BY PageIndex.IndexId;";
+            pagedResultsSql += " drop table #PageIndex";
+            sql = sql + tempsql + pagedResultsSql;
+			sql = string.Format(sql, whereClause, pageSize, startIndex, orderByClause);
+			DataSet ds=SqlHelper.ExecuteDataset(this.ConnectionString,CommandType.Text,sql, GetSQLParamtersBySearchColumns(searchColumns));
+			if (ds == null || ds.Tables.Count != 1 || ds.Tables[0].Rows.Count == 0) return null;
+			return CollectionFromDataSet<KitGroup>(ds, KitGroupFromDataRow);
+			}else{ return null;}
+		}
+
+		private int GetKitGroupCount(string whereClause, List<SearchColumn> searchColumns)
+		{
+
+			string sql=string.Empty;
+			if(string.IsNullOrEmpty(whereClause))
+				sql = "SELECT Count(*) FROM KitGroup as AllRecords ";
+			else
+				sql = "SELECT Count(*) FROM KitGroup as AllRecords where  " +whereClause;
+			var rowCount = SqlHelper.ExecuteScalar(this.ConnectionString, CommandType.Text, sql, GetSQLParamtersBySearchColumns(searchColumns));
+			return rowCount == DBNull.Value ? 0 :(int)rowCount;
+		}
+
+		[MOLog(AuditOperations.Create,typeof(KitGroup))]
+		public virtual KitGroup InsertKitGroup(KitGroup entity)
+		{
+
+			KitGroup other=new KitGroup();
+			other = entity;
+			if(entity.IsTransient())
+			{
+				string sql=@"Insert into KitGroup ( [KitGroupGUID]
+				,[Name]
+				,[Description]
+				,[Summary]
+				,[ProductID]
+				,[DisplayOrder]
+				,[KitGroupTypeID]
+				,[IsRequired]
+				,[ExtensionData]
+				,[CreatedOn]
+				,[IsReadOnly] )
+				Values
+				( @KitGroupGUID
+				, @Name
+				, @Description
+				, @Summary
+				, @ProductID
+				, @DisplayOrder
+				, @KitGroupTypeID
+				, @IsRequired
+				, @ExtensionData
+				, @CreatedOn
+				, @IsReadOnly );
+				Select scope_identity()";
+				SqlParameter[] parameterArray=new SqlParameter[]{
+					new SqlParameter("@KitGroupID",entity.KitGroupId)
+					, new SqlParameter("@KitGroupGUID",entity.KitGroupGuid)
+					, new SqlParameter("@Name",entity.Name)
+					, new SqlParameter("@Description",entity.Description ?? (object)DBNull.Value)
+					, new SqlParameter("@Summary",entity.Summary ?? (object)DBNull.Value)
+					, new SqlParameter("@ProductID",entity.ProductId)
+					, new SqlParameter("@DisplayOrder",entity.DisplayOrder)
+					, new SqlParameter("@KitGroupTypeID",entity.KitGroupTypeId)
+					, new SqlParameter("@IsRequired",entity.IsRequired)
+					, new SqlParameter("@ExtensionData",entity.ExtensionData ?? (object)DBNull.Value)
+					, new SqlParameter("@CreatedOn",entity.CreatedOn)
+					, new SqlParameter("@IsReadOnly",entity.IsReadOnly)};
+				var identity=SqlHelper.ExecuteScalar(this.ConnectionString,CommandType.Text,sql,parameterArray);
+				if(identity==DBNull.Value) throw new DataException("Identity column was null as a result of the insert operation.");
+				return GetKitGroup(Convert.ToInt32(identity));
+			}
+			return entity;
+		}
+
+		[MOLog(AuditOperations.Update,typeof(KitGroup))]
+		public virtual KitGroup UpdateKitGroup(KitGroup entity)
+		{
+
+			if (entity.IsTransient()) return entity;
+			KitGroup other = GetKitGroup(entity.KitGroupId);
+			if (entity.Equals(other)) return entity;
+			string sql=@"Update KitGroup set  [KitGroupGUID]=@KitGroupGUID
+							, [Name]=@Name
+							, [Description]=@Description
+							, [Summary]=@Summary
+							, [ProductID]=@ProductID
+							, [DisplayOrder]=@DisplayOrder
+							, [KitGroupTypeID]=@KitGroupTypeID
+							, [IsRequired]=@IsRequired
+							, [ExtensionData]=@ExtensionData
+							, [CreatedOn]=@CreatedOn
+							, [IsReadOnly]=@IsReadOnly 
+							 where KitGroupID=@KitGroupID";
+			SqlParameter[] parameterArray=new SqlParameter[]{
+					new SqlParameter("@KitGroupID",entity.KitGroupId)
+					, new SqlParameter("@KitGroupGUID",entity.KitGroupGuid)
+					, new SqlParameter("@Name",entity.Name)
+					, new SqlParameter("@Description",entity.Description ?? (object)DBNull.Value)
+					, new SqlParameter("@Summary",entity.Summary ?? (object)DBNull.Value)
+					, new SqlParameter("@ProductID",entity.ProductId)
+					, new SqlParameter("@DisplayOrder",entity.DisplayOrder)
+					, new SqlParameter("@KitGroupTypeID",entity.KitGroupTypeId)
+					, new SqlParameter("@IsRequired",entity.IsRequired)
+					, new SqlParameter("@ExtensionData",entity.ExtensionData ?? (object)DBNull.Value)
+					, new SqlParameter("@CreatedOn",entity.CreatedOn)
+					, new SqlParameter("@IsReadOnly",entity.IsReadOnly)};
+			SqlHelper.ExecuteNonQuery(this.ConnectionString,CommandType.Text,sql,parameterArray);
+			return GetKitGroup(entity.KitGroupId);
+		}
+
+		public virtual bool DeleteKitGroup(System.Int32 KitGroupId)
+		{
+
+			string sql="delete from KitGroup where KitGroupID=@KitGroupID";
+			SqlParameter parameter=new SqlParameter("@KitGroupID",KitGroupId);
+			var identity=SqlHelper.ExecuteScalar(this.ConnectionString,CommandType.Text,sql,new SqlParameter[] { parameter });
+			return (Convert.ToInt32(identity))==1? true: false;
+		}
+
+		[MOLog(AuditOperations.Delete,typeof(KitGroup))]
+		public virtual KitGroup DeleteKitGroup(KitGroup entity)
+		{
+			this.DeleteKitGroup(entity.KitGroupId);
+			return entity;
+		}
+
+
+		public virtual KitGroup KitGroupFromDataRow(DataRow dr)
+		{
+			if(dr==null) return null;
+			KitGroup entity=new KitGroup();
+			entity.KitGroupId = (System.Int32)dr["KitGroupID"];
+			entity.KitGroupGuid = (System.Guid)dr["KitGroupGUID"];
+			entity.Name = dr["Name"].ToString();
+			entity.Description = dr["Description"].ToString();
+			entity.Summary = dr["Summary"].ToString();
+			entity.ProductId = (System.Int32)dr["ProductID"];
+			entity.DisplayOrder = (System.Int32)dr["DisplayOrder"];
+			entity.KitGroupTypeId = (System.Int32)dr["KitGroupTypeID"];
+			entity.IsRequired = (System.Byte)dr["IsRequired"];
+			entity.ExtensionData = dr["ExtensionData"].ToString();
+			entity.CreatedOn = (System.DateTime)dr["CreatedOn"];
+			entity.IsReadOnly = (System.Byte)dr["IsReadOnly"];
+			return entity;
+		}
+
+	}
+	
+	
+}

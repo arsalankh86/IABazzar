@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+.jcarousel-skin-opencart .jcarousel-container {
+	background:#fff;
+	padding:15px 45px!important;
+	border:none;
+	
+}
+.jcarousel-skin-opencart .jcarousel-direction-rtl {
+	direction: rtl;
+}
+.jcarousel-skin-opencart .jcarousel-container-horizontal {
+	padding: 0px 40px;
+}
+.jcarousel-skin-opencart .jcarousel-clip {
+	overflow: hidden;
+}
+.jcarousel-skin-opencart .jcarousel-clip-horizontal {
+}
+.jcarousel-skin-opencart .jcarousel-item {
+	text-align: center;
+}
+.jcarousel-skin-opencart .jcarousel-item-horizontal {
+	margin: 10px;
+}
+
+transition: all 0.5s ease-in-out;}
+.jcarousel-skin-opencart .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+	margin-right: 0;
+}
+.jcarousel-skin-opencart .jcarousel-item-placeholder {
+	background: #fff;
+	color: #000;
+}
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-opencart .jcarousel-next-horizontal {
+	position: absolute;
+	top: 60px;
+	right:10px;
+	width:31px;
+	height: 31px;
+	cursor: pointer;
+	background: url('../images/buttonNext.png') left top no-repeat; }
+
+.jcarousel-skin-opencart .jcarousel-next-horizontal:hover { background-position:left bottom; }
+.jcarousel-skin-opencart .jcarousel-direction-rtl .jcarousel-next-horizontal {
+	left: 5px;
+	right: auto;
+	background: url('../images/buttonPrevious.png') center no-repeat; 
+}
+.jcarousel-skin-opencart .jcarousel-next-horizontal:hover, .jcarousel-skin-opencart .jcarousel-next-horizontal:focus {}
+.jcarousel-skin-opencart .jcarousel-next-horizontal:active {}
+.jcarousel-skin-opencart .jcarousel-next-disabled-horizontal, .jcarousel-skin-opencart .jcarousel-next-disabled-horizontal:hover, .jcarousel-skin-opencart .jcarousel-next-disabled-horizontal:focus, .jcarousel-skin-opencart .jcarousel-next-disabled-horizontal:active { position:absolute; top:60px; right:10px; width:31px;
+height:31px; cursor:default; background:url('../images/buttonNext.png') left top no-repeat; opacity: .3; filter:alpha(opacity=30); }
+.jcarousel-skin-opencart .jcarousel-prev-horizontal {
+	position: absolute;
+	top: 60px;
+	left:10px;
+	width: 31px;
+	height: 31px;
+	cursor: pointer;
+	background: url('../images/buttonPrevious.png') left top no-repeat; }
+.jcarousel-skin-opencart .jcarousel-prev-horizontal:hover { background-position:left bottom; }
+.jcarousel-skin-opencart .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+	left: auto;
+	right: 0px;
+	background: url('../images/buttonNext.png') center no-repeat;
+}
+.jcarousel-skin-opencart .jcarousel-prev-horizontal:hover, .jcarousel-skin-opencart .jcarousel-prev-horizontal:focus {
+}
+.jcarousel-skin-opencart .jcarousel-prev-horizontal:active {
+}
+.jcarousel-skin-opencart .jcarousel-prev-disabled-horizontal, .jcarousel-skin-opencart .jcarousel-prev-disabled-horizontal:hover, .jcarousel-skin-opencart .jcarousel-prev-disabled-horizontal:focus, .jcarousel-skin-opencart .jcarousel-prev-disabled-horizontal:active { position:absolute; top:60px; left:10px; width:31px;
+height:31px; cursor:default; background:url('../images/buttonPrevious.png') left top no-repeat; opacity: .3; filter:alpha(opacity=30); }
+
+
+
+
+.image-additional > #carousel94 > .jcarousel-skin-opencart > .jcarousel-container-horizontal > .jcarousel-clip-horizontal > ul.jcarousel-list-horizontal > li.jcarousel-item-horizontal { margin:0 0px; }
+.image-additional > #carousel94 > .jcarousel-skin-opencart > .jcarousel-container-horizontal > .jcarousel-prev-horizontal { background:url("../images/smbtPrev.png") left top no-repeat; height:25px; width:25px; top:35px; }
+.image-additional > #carousel94 > .jcarousel-skin-opencart > .jcarousel-container-horizontal > .jcarousel-next-horizontal { background:url("../images/smbtNext.png") left top no-repeat; height:25px; width:25px; top:35px; }
+
+
+
+.image-additional > #carousel94 > .jcarousel-skin-opencart > .jcarousel-container-horizontal > .jcarousel-prev-horizontal:hover, 
+.image-additional > #carousel94 > .jcarousel-skin-opencart > .jcarousel-container-horizontal > .jcarousel-next-horizontal:hover { background-position:left bottom; }
+
+

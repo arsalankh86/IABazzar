@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+Disallow: /Images/
+Disallow: /Styles/
+Disallow: /slider/
+Disallow: /Admin/
+Disallow: /backuptheme/
+Disallow: /ExcelProduct/
+Disallow: /cart.aspx/
+Disallow: /checkout.aspx/
+Disallow: /checkoutanon.aspx/
+Disallow: /Exceltodb.aspx/
+Disallow: /Return.aspx/

@@ -1,0 +1,31 @@
+D:\IabazaarCodeSmith\IABazaar.Core\obj\Debug\ResolveAssemblyReference.cache
+D:\IabazaarCodeSmith\IABazaar.Core\bin\Debug\IABazaar.Core.dll
+D:\IabazaarCodeSmith\IABazaar.Core\bin\Debug\IABazaar.Core.pdb
+D:\IabazaarCodeSmith\IABazaar.Core\bin\Debug\Spring.Core.dll
+D:\IabazaarCodeSmith\IABazaar.Core\obj\Debug\IABazaar.Core.dll
+D:\IabazaarCodeSmith\IABazaar.Core\obj\Debug\IABazaar.Core.pdb
+D:\work\IABazaar\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.dll
+D:\work\IABazaar\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.pdb
+D:\work\IABazaar\IABazaar\IABazaar.Core\obj\Debug\ResolveAssemblyReference.cache
+D:\work\IABazaar\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.dll
+D:\work\IABazaar\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.pdb
+D:\work\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.dll
+D:\work\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.pdb
+D:\work\IABazaar\IABazaar.Core\obj\Debug\ResolveAssemblyReference.cache
+D:\work\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.dll
+D:\work\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.pdb
+F:\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.dll
+F:\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.pdb
+F:\IABazaar\IABazaar.Core\obj\Debug\ResolveAssemblyReference.cache
+F:\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.dll
+F:\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.pdb
+E:\D Drive Data\work\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.dll
+E:\D Drive Data\work\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.pdb
+E:\D Drive Data\work\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.csprojResolveAssemblyReference.cache
+E:\D Drive Data\work\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.dll
+E:\D Drive Data\work\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.pdb
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.dll
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Core\bin\Debug\IABazaar.Core.pdb
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.csprojResolveAssemblyReference.cache
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.dll
+C:\Users\Arsalan\Desktop\Zuni\IABazaar\IABazaar.Core\obj\Debug\IABazaar.Core.pdb

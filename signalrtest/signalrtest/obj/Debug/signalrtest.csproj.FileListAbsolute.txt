@@ -1,0 +1,17 @@
+d:\work\IABazaar\signalrtest\signalrtest\bin\signalrtest.dll
+d:\work\IABazaar\signalrtest\signalrtest\bin\signalrtest.pdb
+d:\work\IABazaar\signalrtest\signalrtest\bin\Microsoft.AspNet.SignalR.Core.dll
+d:\work\IABazaar\signalrtest\signalrtest\bin\Microsoft.AspNet.SignalR.Owin.dll
+d:\work\IABazaar\signalrtest\signalrtest\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+d:\work\IABazaar\signalrtest\signalrtest\bin\Microsoft.Owin.Host.SystemWeb.dll
+d:\work\IABazaar\signalrtest\signalrtest\bin\Microsoft.Web.Infrastructure.dll
+d:\work\IABazaar\signalrtest\signalrtest\bin\Newtonsoft.Json.dll
+d:\work\IABazaar\signalrtest\signalrtest\bin\Owin.dll
+d:\work\IABazaar\signalrtest\signalrtest\bin\Microsoft.AspNet.SignalR.Core.xml
+d:\work\IABazaar\signalrtest\signalrtest\bin\Microsoft.AspNet.SignalR.Owin.xml
+d:\work\IABazaar\signalrtest\signalrtest\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+d:\work\IABazaar\signalrtest\signalrtest\bin\Microsoft.Owin.Host.SystemWeb.xml
+d:\work\IABazaar\signalrtest\signalrtest\bin\Newtonsoft.Json.xml
+d:\work\IABazaar\signalrtest\signalrtest\obj\Debug\ResolveAssemblyReference.cache
+d:\work\IABazaar\signalrtest\signalrtest\obj\Debug\signalrtest.dll
+d:\work\IABazaar\signalrtest\signalrtest\obj\Debug\signalrtest.pdb

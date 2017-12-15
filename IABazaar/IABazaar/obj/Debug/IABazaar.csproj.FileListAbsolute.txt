@@ -1,0 +1,5 @@
+d:\work\IABazaar\IABazaar\IABazaar\bin\Debug\IABazaar.dll
+d:\work\IABazaar\IABazaar\IABazaar\bin\Debug\IABazaar.pdb
+d:\work\IABazaar\IABazaar\IABazaar\obj\Debug\ResolveAssemblyReference.cache
+d:\work\IABazaar\IABazaar\IABazaar\obj\Debug\IABazaar.dll
+d:\work\IABazaar\IABazaar\IABazaar\obj\Debug\IABazaar.pdb

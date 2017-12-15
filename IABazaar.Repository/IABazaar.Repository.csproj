@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B52E668-4264-40D2-9F4E-B8700A75FD02}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IABazaar.Repository</RootNamespace>
+    <AssemblyName>IABazaar.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressRepository.cs" />
+    <Compile Include="AddressRepository.base.cs">
+      <DependentUpon>AddressRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppConfigRepository.cs" />
+    <Compile Include="AppConfigRepository.base.cs">
+      <DependentUpon>AppConfigRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AspdnsfSysLogRepository.cs" />
+    <Compile Include="AspdnsfSysLogRepository.base.cs">
+      <DependentUpon>AspdnsfSysLogRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditLogRepository.cs" />
+    <Compile Include="AuditLogRepository.base.cs">
+      <DependentUpon>AuditLogRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BadWordRepository.cs" />
+    <Compile Include="BadWordRepository.base.cs">
+      <DependentUpon>BadWordRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryRepository.cs" />
+    <Compile Include="CategoryRepository.base.cs">
+      <DependentUpon>CategoryRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClickTrackRepository.cs" />
+    <Compile Include="ClickTrackRepository.base.cs">
+      <DependentUpon>ClickTrackRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountryRepository.cs" />
+    <Compile Include="CountryRepository.base.cs">
+      <DependentUpon>CountryRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountryTaxRateRepository.cs" />
+    <Compile Include="CountryTaxRateRepository.base.cs">
+      <DependentUpon>CountryTaxRateRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CouponRepository.cs" />
+    <Compile Include="CouponRepository.base.cs">
+      <DependentUpon>CouponRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CouponStoreRepository.cs" />
+    <Compile Include="CouponStoreRepository.base.cs">
+      <DependentUpon>CouponStoreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CouponUsageRepository.cs" />
+    <Compile Include="CouponUsageRepository.base.cs">
+      <DependentUpon>CouponUsageRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCardTypeRepository.cs" />
+    <Compile Include="CreditCardTypeRepository.base.cs">
+      <DependentUpon>CreditCardTypeRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyRepository.cs" />
+    <Compile Include="CurrencyRepository.base.cs">
+      <DependentUpon>CurrencyRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCartRepository.cs" />
+    <Compile Include="CustomCartRepository.base.cs">
+      <DependentUpon>CustomCartRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="CustomerRepository.base.cs">
+      <DependentUpon>CustomerRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerGiftRegistrySearchesRepository.cs" />
+    <Compile Include="CustomerGiftRegistrySearchesRepository.base.cs">
+      <DependentUpon>CustomerGiftRegistrySearchesRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLevelRepository.cs" />
+    <Compile Include="CustomerLevelRepository.base.cs">
+      <DependentUpon>CustomerLevelRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerProductSizeDetailRepository.cs" />
+    <Compile Include="CustomerProductSizeDetailRepository.base.cs">
+      <DependentUpon>CustomerProductSizeDetailRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSessionRepository.cs" />
+    <Compile Include="CustomerSessionRepository.base.cs">
+      <DependentUpon>CustomerSessionRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomReportRepository.cs" />
+    <Compile Include="CustomReportRepository.base.cs">
+      <DependentUpon>CustomReportRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DistributorRepository.cs" />
+    <Compile Include="DistributorRepository.base.cs">
+      <DependentUpon>DistributorRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentRepository.cs" />
+    <Compile Include="DocumentRepository.base.cs">
+      <DependentUpon>DocumentRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentAffiliateRepository.cs" />
+    <Compile Include="DocumentAffiliateRepository.base.cs">
+      <DependentUpon>DocumentAffiliateRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentCustomerLevelRepository.cs" />
+    <Compile Include="DocumentCustomerLevelRepository.base.cs">
+      <DependentUpon>DocumentCustomerLevelRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentLibraryRepository.cs" />
+    <Compile Include="DocumentLibraryRepository.base.cs">
+      <DependentUpon>DocumentLibraryRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentTypeRepository.cs" />
+    <Compile Include="DocumentTypeRepository.base.cs">
+      <DependentUpon>DocumentTypeRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityStoreRepository.cs" />
+    <Compile Include="EntityStoreRepository.base.cs">
+      <DependentUpon>EntityStoreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLogRepository.cs" />
+    <Compile Include="ErrorLogRepository.base.cs">
+      <DependentUpon>ErrorLogRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventHandlerRepository.cs" />
+    <Compile Include="EventHandlerRepository.base.cs">
+      <DependentUpon>EventHandlerRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedPriceRepository.cs" />
+    <Compile Include="ExtendedPriceRepository.base.cs">
+      <DependentUpon>ExtendedPriceRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FailedTransactionRepository.cs" />
+    <Compile Include="FailedTransactionRepository.base.cs">
+      <DependentUpon>FailedTransactionRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaqRepository.cs" />
+    <Compile Include="FaqRepository.base.cs">
+      <DependentUpon>FaqRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedRepository.cs" />
+    <Compile Include="FeedRepository.base.cs">
+      <DependentUpon>FeedRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GalleryRepository.cs" />
+    <Compile Include="GalleryRepository.base.cs">
+      <DependentUpon>GalleryRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenreRepository.cs" />
+    <Compile Include="GenreRepository.base.cs">
+      <DependentUpon>GenreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiftCardRepository.cs" />
+    <Compile Include="GiftCardRepository.base.cs">
+      <DependentUpon>GiftCardRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiftCardStoreRepository.cs" />
+    <Compile Include="GiftCardStoreRepository.base.cs">
+      <DependentUpon>GiftCardStoreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiftCardUsageRepository.cs" />
+    <Compile Include="GiftCardUsageRepository.base.cs">
+      <DependentUpon>GiftCardUsageRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalConfigRepository.cs" />
+    <Compile Include="GlobalConfigRepository.base.cs">
+      <DependentUpon>GlobalConfigRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryRepository.cs" />
+    <Compile Include="InventoryRepository.base.cs">
+      <DependentUpon>InventoryRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitCartRepository.cs" />
+    <Compile Include="KitCartRepository.base.cs">
+      <DependentUpon>KitCartRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitGroupRepository.cs" />
+    <Compile Include="KitGroupRepository.base.cs">
+      <DependentUpon>KitGroupRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitGroupTypeRepository.cs" />
+    <Compile Include="KitGroupTypeRepository.base.cs">
+      <DependentUpon>KitGroupTypeRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitItemRepository.cs" />
+    <Compile Include="KitItemRepository.base.cs">
+      <DependentUpon>KitItemRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutRepository.cs" />
+    <Compile Include="LayoutRepository.base.cs">
+      <DependentUpon>LayoutRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFieldRepository.cs" />
+    <Compile Include="LayoutFieldRepository.base.cs">
+      <DependentUpon>LayoutFieldRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFieldAttributeRepository.cs" />
+    <Compile Include="LayoutFieldAttributeRepository.base.cs">
+      <DependentUpon>LayoutFieldAttributeRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutMapRepository.cs" />
+    <Compile Include="LayoutMapRepository.base.cs">
+      <DependentUpon>LayoutMapRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryRepository.cs" />
+    <Compile Include="LibraryRepository.base.cs">
+      <DependentUpon>LibraryRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocaleSettingRepository.cs" />
+    <Compile Include="LocaleSettingRepository.base.cs">
+      <DependentUpon>LocaleSettingRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogCustomerEventRepository.cs" />
+    <Compile Include="LogCustomerEventRepository.base.cs">
+      <DependentUpon>LogCustomerEventRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogEventRepository.cs" />
+    <Compile Include="LogEventRepository.base.cs">
+      <DependentUpon>LogEventRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailingMgrLogRepository.cs" />
+    <Compile Include="MailingMgrLogRepository.base.cs">
+      <DependentUpon>MailingMgrLogRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturerRepository.cs" />
+    <Compile Include="ManufacturerRepository.base.cs">
+      <DependentUpon>ManufacturerRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobileDeviceRepository.cs" />
+    <Compile Include="MobileDeviceRepository.base.cs">
+      <DependentUpon>MobileDeviceRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsletterMailListRepository.base.cs" />
+    <Compile Include="NewsletterMailListRepository.cs" />
+    <Compile Include="NewsRepository.cs" />
+    <Compile Include="NewsRepository.base.cs">
+      <DependentUpon>NewsRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsStoreRepository.cs" />
+    <Compile Include="NewsStoreRepository.base.cs">
+      <DependentUpon>NewsStoreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderNumbersRepository.cs" />
+    <Compile Include="OrderNumbersRepository.base.cs">
+      <DependentUpon>OrderNumbersRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderOptionRepository.cs" />
+    <Compile Include="OrderOptionRepository.base.cs">
+      <DependentUpon>OrderOptionRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderOptionStoreRepository.cs" />
+    <Compile Include="OrderOptionStoreRepository.base.cs">
+      <DependentUpon>OrderOptionStoreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersRepository.cs" />
+    <Compile Include="OrdersRepository.base.cs">
+      <DependentUpon>OrdersRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersShoppingCartRepository.cs" />
+    <Compile Include="OrdersShoppingCartRepository.base.cs">
+      <DependentUpon>OrdersShoppingCartRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageTypeRepository.cs" />
+    <Compile Include="PageTypeRepository.base.cs">
+      <DependentUpon>PageTypeRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartnerRepository.cs" />
+    <Compile Include="PartnerRepository.base.cs">
+      <DependentUpon>PartnerRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PollRepository.cs" />
+    <Compile Include="PollRepository.base.cs">
+      <DependentUpon>PollRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PollAnswerRepository.cs" />
+    <Compile Include="PollAnswerRepository.base.cs">
+      <DependentUpon>PollAnswerRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PollCategoryRepository.cs" />
+    <Compile Include="PollCategoryRepository.base.cs">
+      <DependentUpon>PollCategoryRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PollSectionRepository.cs" />
+    <Compile Include="PollSectionRepository.base.cs">
+      <DependentUpon>PollSectionRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PollSortOrderRepository.cs" />
+    <Compile Include="PollSortOrderRepository.base.cs">
+      <DependentUpon>PollSortOrderRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PollStoreRepository.cs" />
+    <Compile Include="PollStoreRepository.base.cs">
+      <DependentUpon>PollStoreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PollVotingRecordRepository.cs" />
+    <Compile Include="PollVotingRecordRepository.base.cs">
+      <DependentUpon>PollVotingRecordRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductRepository.cs" />
+    <Compile Include="ProductRepository.base.cs">
+      <DependentUpon>ProductRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAffiliateRepository.cs" />
+    <Compile Include="ProductAffiliateRepository.base.cs">
+      <DependentUpon>ProductAffiliateRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategoryRepository.cs" />
+    <Compile Include="ProductCategoryRepository.base.cs">
+      <DependentUpon>ProductCategoryRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCustomerLevelRepository.cs" />
+    <Compile Include="ProductCustomerLevelRepository.base.cs">
+      <DependentUpon>ProductCustomerLevelRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDistributorRepository.cs" />
+    <Compile Include="ProductDistributorRepository.base.cs">
+      <DependentUpon>ProductDistributorRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductGenreRepository.cs" />
+    <Compile Include="ProductGenreRepository.base.cs">
+      <DependentUpon>ProductGenreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductLocaleSettingRepository.cs" />
+    <Compile Include="ProductLocaleSettingRepository.base.cs">
+      <DependentUpon>ProductLocaleSettingRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductManufacturerRepository.cs" />
+    <Compile Include="ProductManufacturerRepository.base.cs">
+      <DependentUpon>ProductManufacturerRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSectionRepository.cs" />
+    <Compile Include="ProductSectionRepository.base.cs">
+      <DependentUpon>ProductSectionRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductStoreRepository.cs" />
+    <Compile Include="ProductStoreRepository.base.cs">
+      <DependentUpon>ProductStoreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductTypeRepository.cs" />
+    <Compile Include="ProductTypeRepository.base.cs">
+      <DependentUpon>ProductTypeRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductVariantRepository.cs" />
+    <Compile Include="ProductVariantRepository.base.cs">
+      <DependentUpon>ProductVariantRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductVectorRepository.cs" />
+    <Compile Include="ProductVectorRepository.base.cs">
+      <DependentUpon>ProductVectorRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductViewRepository.cs" />
+    <Compile Include="ProductViewRepository.base.cs">
+      <DependentUpon>ProductViewRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileRepository.cs" />
+    <Compile Include="ProfileRepository.base.cs">
+      <DependentUpon>ProfileRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuantityDiscountRepository.cs" />
+    <Compile Include="QuantityDiscountRepository.base.cs">
+      <DependentUpon>QuantityDiscountRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuantityDiscountTableRepository.cs" />
+    <Compile Include="QuantityDiscountTableRepository.base.cs">
+      <DependentUpon>QuantityDiscountTableRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RatingRepository.cs" />
+    <Compile Include="RatingRepository.base.cs">
+      <DependentUpon>RatingRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RatingCommentHelpfulnessRepository.cs" />
+    <Compile Include="RatingCommentHelpfulnessRepository.base.cs">
+      <DependentUpon>RatingCommentHelpfulnessRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository.cs" />
+    <Compile Include="RestrictedIpRepository.cs" />
+    <Compile Include="RestrictedIpRepository.base.cs">
+      <DependentUpon>RestrictedIpRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesPromptRepository.cs" />
+    <Compile Include="SalesPromptRepository.base.cs">
+      <DependentUpon>SalesPromptRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SectionRepository.cs" />
+    <Compile Include="SectionRepository.base.cs">
+      <DependentUpon>SectionRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCartRepository.cs" />
+    <Compile Include="ShoppingCartRepository.base.cs">
+      <DependentUpon>ShoppingCartRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinPreviewRepository.cs" />
+    <Compile Include="SkinPreviewRepository.base.cs">
+      <DependentUpon>SkinPreviewRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlLogRepository.cs" />
+    <Compile Include="SqlLogRepository.base.cs">
+      <DependentUpon>SqlLogRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffRepository.cs" />
+    <Compile Include="StaffRepository.base.cs">
+      <DependentUpon>StaffRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateRepository.cs" />
+    <Compile Include="StateRepository.base.cs">
+      <DependentUpon>StateRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateTaxRateRepository.cs" />
+    <Compile Include="StateTaxRateRepository.base.cs">
+      <DependentUpon>StateTaxRateRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreRepository.cs" />
+    <Compile Include="StoreRepository.base.cs">
+      <DependentUpon>StoreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringResourceRepository.cs" />
+    <Compile Include="StringResourceRepository.base.cs">
+      <DependentUpon>StringResourceRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxClassRepository.cs" />
+    <Compile Include="TaxClassRepository.base.cs">
+      <DependentUpon>TaxClassRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopicRepository.cs" />
+    <Compile Include="TopicRepository.base.cs">
+      <DependentUpon>TopicRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopicStoreRepository.cs" />
+    <Compile Include="TopicStoreRepository.base.cs">
+      <DependentUpon>TopicStoreRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VectorRepository.cs" />
+    <Compile Include="VectorRepository.base.cs">
+      <DependentUpon>VectorRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZipTaxRateRepository.cs" />
+    <Compile Include="ZipTaxRateRepository.base.cs">
+      <DependentUpon>ZipTaxRateRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IABazaar.Core\IABazaar.Core.csproj">
+      <Project>{365E2586-4952-4064-B846-6FD90D07AFEA}</Project>
+      <Name>IABazaar.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

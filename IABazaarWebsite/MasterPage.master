@@ -1,0 +1,432 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="Anycart Responsive Retail Template" />
+    <title>Iabazaar</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen" />
+    <!--<!--<link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css' />-->-->
+    <link rel="stylesheet" type="text/css" href="css/carousel.css" media="screen" />
+    <link rel="stylesheet" href="slider/css/style.css" type="text/css" media="all" />
+    <script src="slider/js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="slider/js/jquery.jcarousel.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="slider/js/jquery-func.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+    <script src="js/jquery/ui/external/jquery.cookie.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.cycle.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery/jquery.cycle.js"></script>
+    <script src="js/jquery/jquery.jcarousel.min.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/jquery.tooltipster.min.js"></script>
+    <script src="js/custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/facebook.css" />
+    <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+    <script src="js/modernizr.custom.17475.js"></script>
+    <!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<![endif]-->
+    <!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie6.css" />
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('#logo img');
+</script>
+<![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="mainWrapper">
+        <!--Header Part Start-->
+        <header>
+<div class="headerTopBg">
+
+<div class="headerTop">
+	<div id="welcome">Welcome<a href="login.html" title="Login">login/Sign up</a> or <a href="register.html" title="Create An Account">Call now</a>.</div>
+
+    <!--Currency Part Start-->  
+    <script type="text/javascript">
+        $(document).ready(function () {
+            co_w = $('#c_options').width();
+            $('#c_switcher').css('width', (co_w + 15) + 'px');
+            $('#c_switcher').hover(function () {
+                $('#c_options').slideDown(200);
+            }, function () {
+                $('#c_options').slideUp(200);
+            });
+        });		
+    </script>  
+    
+    
+    <!--Currency Part End-->    
+
+
+    <!--Language Part Start-->  
+    <script type="text/javascript">
+        $(document).ready(function () {
+            l_w = $('#l_options').width();
+            $('#l_switcher').css('width', (l_w + 18) + 'px');
+            $('#l_switcher').hover(function () {
+                $('#l_options').slideDown(200);
+            }, function () {
+                $('#l_options').slideUp(200);
+            });
+        });		
+    </script>  
+    
+    
+    <!--Language Part End-->
+
+
+    <!--Cart Part Start-->
+	<div id="cart">
+      <div class="heading">
+        <!--<h4>Shopping Cart</h4>-->
+        <a><span id="cart-total"><asp:Label ID="lblcart" runat="server" Text="0 item(s)"></asp:Label> </span></a></div>
+      	<div class="content">
+            <div class="mini-cart-info">
+
+            <asp:Repeater ID="rptcart" runat="server">
+            <ItemTemplate>
+            <table>
+                    <tr>
+              <td class="image">
+              
+              <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# Eval("ImageFilenameOverride") %>'
+         AlternateText='<%# Eval("Name") %>' />
+         
+                </td>
+              <td class="name"><a href="#"><%# Eval("Name") %></a>
+               <%-- <div>
+                                - <small>Select Blue</small><br />
+                              </div>--%></td>
+              <td class="quantity">x&nbsp;1</td>
+              <td class="total">$<%# Eval("ProductPrice")%></td>
+              <td class="remove"><img src="images/remove-small.png" alt="Remove" title="Remove" onClick="javascript:void(0);" /></td>
+            </tr>
+                    
+                          </table>
+            </ItemTemplate>
+            </asp:Repeater>
+
+          
+        </div>
+      <%--  <div class="mini-cart-total">
+          <table>
+                    <tr>
+              <td class="fr"><b>Sub-Total:</b></td>
+              <td class="fr">$1,080.00</td>
+            </tr>
+                    <tr>
+              <td class="fr"><b>Total:</b></td>
+              <td class="fr">$1,080.00</td>
+            </tr>
+                  </table>
+        </div>--%>
+        <div class="checkout">
+        <a class="button" href="cart.aspx"><span>View Cart</span></a> 
+        <a class="button" href="checkout.aspx"><span>Checkout</span></a></div>
+        </div>
+    </div>
+	<!--Cart Part End-->
+  	<div class="clear"></div>
+</div>
+
+<div class="headerBG">
+
+<div id="headerMain">
+<div id="header">
+    <div id="logo">
+    <a href="index-2.html"><img src="images/logo2.png" title="Anycart - Responsive Retail Template" alt="Anycart - Responsive Retail Template" /></a>
+    </div>
+    
+ 	<div class="links">
+ 	<a class="home" href="Default.aspx">Home</a>
+    <a href="Wishlist.aspx">Wish List (3)</a>
+    <a href="MyAccount.aspx">My Account</a>
+    <a href="cart.aspx">Shopping Cart</a>
+    <a href="checkout.aspx">Checkout</a>
+	</div>
+  
+  	<div id="search">
+    	<div class="button-search"></div>
+        <input type="text" name="filter_name" value="Search" onClick="this.value = '';" onKeyDown="this.style.color = '#333';" />
+	</div>
+</div>
+<div class="clear"></div>
+</div>
+
+
+<!--Nav Part Start-->
+<nav>
+<div class="menu-main">
+<div id="menu">
+  <ul>
+  	<li><a href="index-2.html" title="Home"><span class='home_icon'></span></a></li>
+        <li><a href="product.html" title="Men">Clothing</a>          
+		</li>
+        <li><a href="product.html" title="Shoes">Salwar Kameez</a>
+        <div>
+                <ul>
+               <li><a href="c-element-women-tops-1"> Aalishan Krinkle Lawn</a></li>
+             <li><a href="product.html" title="Sweats"> Ali Xeeshan by Shariq</a></li>
+             <li><a href="product.html" title="Sweats"> Aramish Exclusive Lawn On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Crescent Luxury Collection On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Gorgeous Wintery by LSM On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Hajiba De Chiffon Lawn</a></li>
+             <li><a href="product.html" title="Sweats"> Khadder Winter By Shariq On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Komal by LSM On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> La Femme Emb Collection On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Monsoon Festivana Vol 2 On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Orient Linen Collection On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Popular Cambric Collection 2013</a></li>
+             <li><a href="product.html" title="Sweats"> Popular Classic Lawn Collection 2013</a></li>
+             <li><a href="product.html" title="Sweats"> Popular Exclusive Lawn Collection 2013</a></li>
+             <li><a href="product.html" title="Sweats"> Popular Lawn Collection 2013 On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Popular Linen Collection 2014</a></li>
+             <li><a href="product.html" title="Sweats"> Rabeea Embroidered Linen 2013 On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Reeva Collection On Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Royal Embroidered Linen by IttehadOn Sale</a></li>
+             <li><a href="product.html" title="Sweats"> Sahil Mid Summer 2013 On Sale</a></li>
+                </ul>
+     		 </div>
+        </li>
+        <li><a href="product.html" title="Bags">Readymade Salwar Suits</a>
+        <div>
+                <ul>
+                 <li><a href="product.html" title="Sweats">Al Karam Winter Hues 2013 Vol-1 On Sale</a></li>
+<li><a href="product.html" title="Sweats"> Al Karam Winter Hues 2013 Vol-2 On Sale</a></li>
+ <li><a href="product.html" title="Sweats">Al Karam Winter Hues 2013 Vol-3 On Sale</a></li>
+ <li><a href="product.html" title="Sweats">Alkaram Shawls 2013 On Sale</a></li>
+ <li><a href="product.html" title="Sweats">AlKaram Valentine Day Collection</a></li>
+ <li><a href="product.html" title="Sweats">Braahtii by Huma</a></li>
+ <li><a href="product.html" title="Sweats">Element Women Bottoms On Sale</a></li>
+ <li><a href="product.html" title="Sweats">Element Women Tops On Sale</a></li>
+ <li><a href="product.html" title="Sweats">Kausar Outfits</a></li>
+ <li><a href="product.html" title="Sweats">Party Wear By Themz</a></li>
+ <li><a href="product.html" title="Sweats">Strawberry Chiffon RTW On Sale</a></li>
+ <li><a href="product.html" title="Sweats">Vibration RTW Collection</a></li>
+<li><a href="product.html" title="Sweats"> Winter Umer Sayeed RTW Collection 2013 On Sale</a></li>
+                </ul>
+     		 </div>
+        </li>
+        <li><a href="product.html" title="Women">Kurtis</a>
+            <div>
+                <ul>
+                <li><a href="product.html" title="Jacket">Jacket</a></li>
+                <li><a href="product.html" title="Jeans">Jeans</a></li>
+                <li><a href="product.html" title="Shoes">Shoes</a></li>
+                <li><a href="product.html" title="Skirts">Skirts</a></li>
+                <li><a href="product.html" title="Sweats">Sweats</a></li>
+                </ul>
+                <span class="catImg"><img src="images/products/womenJacketThree-200x200.jpg" alt="women jacket three" /></span>
+     		 </div>
+          </li>
+        <li><a href="product.html" title="Clothing">Brand</a>
+        <div>
+                <ul>
+              <li><a href="product.html" title="Sweats"> Al Karam Festival Collection 2013 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Al Karam MidSummer 2013 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Al Karam Winter Digital Collection 2013 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Al Karam Winter Hues 2013 Vol-1 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Al Karam Winter Hues 2013 Vol-2 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Al Karam Winter Hues 2013 Vol-3 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Alkaram Spring/Summer Collection 2013 Vol-1 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Alkaram Spring/Summer Collection 2013 Vol-2 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Allure by Alkaram - 2013 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Deepak Perwani On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Faiza Samee On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Gul Ahmed 2013 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Gul Ahmed New Season 2013 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Gul Ahmed Summer Style 2013 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Sana & Samia On Sale</a></li>
+
+<li><a href="product.html" title="Sweats"> Umar Sayeed Collection 2013 On Sale</a></li>
+ <li><a href="product.html" title="Sweats"> Umar Sayeed Festival 2013 On Sale</a></li>
+
+                </ul>
+                
+     		 </div>
+          
+        </li>
+        <li><a href="product.html" title="Jewelry">Combo Deals</a></li>
+      </ul>
+</div>
+</div>
+</nav>
+<!--Nav Part End-->
+
+<!-- PHONE::Start -->
+<div id="menu-phone" class="shown-phone" style="display: none;">
+  <div id="menu-phone-button">Menu</div>
+  <select id="menu-phone-select" onChange="location = this.value">
+  		<option value="index-2.html">Home</option>
+        <option value="product.html">Men</option>
+        <option value="product.html">Shoes</option>
+        <option value="product.html">Bags</option>
+        <option value="product.html">Women</option>
+        <option value="product.html">Clothing</option>
+        <option value="product.html">Jewelry</option>
+        <option value="product.html">Kids</option>
+        <option value="shortcodes.html">Shortcodes</option>
+      </select>
+</div>
+
+<script type="text/javascript">
+    // Bind the Phone menu dropdown
+    $('#menu-phone-button').bind('click', function () {
+        $("#menu-phone-select").css({ 'opacity': '1' });
+    });
+</script>
+<!-- PHONE::End -->
+
+
+</div>
+
+
+</div>
+</header>
+        <!--Header Part End-->
+        <div class="wrapper">
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <!--Footer Part Start-->
+        <footer>
+
+<div class="backTop" id="backTop"><a title="Back to Top" href="javascript:void(0)" class="backtotop">Top</a></div>
+
+
+
+
+<div class="clear"></div>
+<!--start footerTop -->
+
+
+<!-- end footertop -->
+
+
+
+
+
+<div id="footerMain">
+<div id="footerm" class="mobileFpart">
+  <div class="column">
+    <h3>Information</h3>
+    <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="delivery.html">Delivery Information</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="conditions.html">Terms &amp; Conditions</a></li>
+          </ul>
+  </div>
+  <div class="column">
+    <h3>Customer Service</h3>
+    <ul>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="returns.html">Returns</a></li>
+      <li><a href="sitemap.html">Site Map</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <h3>Extras</h3>
+    <ul>
+      <li><a href="brands.html">Brands</a></li>
+      <li><a href="voucher.html">Gift Vouchers</a></li>
+      <li><a href="affiliates.html">Affiliates</a></li>
+      <li><a href="specials.html">Specials</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <h3>My Account</h3>
+    <ul>
+      <li><a href="myaccount.html">My Account</a></li>
+      <li><a href="orderhistory.html">Order History</a></li>
+      <li><a href="wishlist.html">Wish List</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div id="footer">
+  <div class="column">
+    <h3>Information</h3>
+    <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="delivery.html">Delivery Information</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="conditions.html">Terms &amp; Conditions</a></li>
+          </ul>
+  </div>
+  <div class="column">
+    <h3>Customer Service</h3>
+    <ul>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="returns.html">Returns</a></li>
+      <li><a href="sitemap.html">Site Map</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <h3>Extras</h3>
+    <ul>
+      <li><a href="brands.html">Brands</a></li>
+      <li><a href="voucher.html">Gift Vouchers</a></li>
+      <li><a href="affiliates.html">Affiliates</a></li>
+      <li><a href="specials.html">Specials</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <h3>My Account</h3>
+    <ul>
+      <li><a href="myaccount.html">My Account</a></li>
+      <li><a href="orderhistory.html">Order History</a></li>
+      <li><a href="wishlist.html">Wish List</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="powered-main">
+    <div id="powered">
+        <div class="fl">iabazaar &copy; 2013</div>
+        Theme by <a href="http://www.curvepixell.com/" target="_blank" title="CURVEPIXELL">CURVEPIXELL</a>
+    </div>
+</div>
+
+</div>
+</footer>
+        <!--Footer Part End-->
+    </div>
+    
+    <!--Scroll back to top-->
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#backTop').fadeIn();
+                } else {
+                    $('#backTop').fadeOut();
+                }
+            });
+        });
+        jQuery('.backtotop').click(function () {
+            jQuery('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+
+    </script>
+    <!--end of Scroll back to top-->
+    </form>
+</body>
+</html>
